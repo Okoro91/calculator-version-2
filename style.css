@@ -26,6 +26,18 @@ body{
     border-radius: 15px;
 }
 
+span{
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #ebaf0c, #79066f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+}
+
 
 .display input {
     width: 360px;
@@ -34,8 +46,6 @@ body{
     padding: 20px;
     margin: 10px;
     background-color: #171817;
-    /* background: linear-gradient(45deg, #0a0a0a, #3a4452); */
-    /* background: transparent; */
     box-shadow: inset -5px -5px 12px  #202020,
                 inset 5px 5px 12px  #464e4600;
     border-radius: 30px;

@@ -4,10 +4,13 @@ const buttons = document.querySelectorAll('button');
 let output = '';
 
 buttons.forEach(button => {
+
+    output.innerHtml = '';
+
     button.addEventListener('click', (event) => {
         if(event.target.textContent == '='){
             output = String(eval(output));
-            display.value = output;
+            display.value = ` = ${output}`;
         }else if(event.target.textContent == 'AC'){
             output = '';
             display.value = output;
@@ -18,9 +21,13 @@ buttons.forEach(button => {
 
             display.value = output;
         }else if (event.target.id == 'plus-minus'){
-            output = String(eval(string));
+            output = String(-eval(output));
             display.value = output;
         }else {
+            if(display.value.includes('=')){
+                output = '';
+            }
+
             output += event.target.textContent;
             display.value = output;
         }
